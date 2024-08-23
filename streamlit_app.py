@@ -50,6 +50,7 @@ comman = st.sidebar.text_input("Input command")
 with st.sidebar:
     if comman == "datetime":
         st.write(jptime)
+        st.write(now)
     elif comman == "company":
         st.write("@2024 DeVa Quantum Genesis")
     elif comman == "home_page":
