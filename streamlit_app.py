@@ -1,13 +1,25 @@
 import streamlit as st
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
+from datetime import datetime, time
+
 name = st.sidebar.text_input("名前を教えてください")
 
 with st.sidebar:
     st.title("DeVaAI Studio")
-    st.write(
-        f"ようこそ、{name}。お会いできて嬉しいです。"
-    )
+    now = datetime.today()
+    if now = 6 or 7 or 8 or 9:
+        st.write(
+            f"おはようございます、{name}。今日はどんな1日になりそうですか？"
+            elif now = 10 or 11 or 12 or 13 or 14 or 15 or 16:
+            st.write(
+            f"こんにちは、{name}。お会いできて嬉しいです。"
+            )
+
+            else :
+            st.write(
+            "こんばんは、{name}。今日はどんな1日でしたか？"
+            )
    
 st.title(f"こんにちは  {name}")
 st.write(
