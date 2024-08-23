@@ -13,7 +13,9 @@ with st.sidebar:
         " @2024 DeVa Quantum Genesis"
     )
     if st.button("今日の名言を考えます"):
-        st.write("現在準備中")
+        model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
+        meigen = model.generate_content("今日の名言を考えてください")
+        st.write(meigen)
 
 now = datetime.datetime.now()
 jptime = now.hour + 9
