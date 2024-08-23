@@ -58,7 +58,7 @@ else :
 
 genai.configure(api_key="AIzaSyAyK2A2Ove7VnXEahCBB9SxEPoyLeeVJR0")
 if "messages" not in st.session_state:
-        st.session_state.messages = []
+    st.session_state.messages = []
 
     # Display the existing chat messages via `st.chat_message`.
 for message in st.session_state.messages:
@@ -68,7 +68,7 @@ for message in st.session_state.messages:
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
 if prompt := st.chat_input("ご用件を教えてください"):
-        st.session_state.messages.append({"role": "user", "content": prompt})
+    st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
