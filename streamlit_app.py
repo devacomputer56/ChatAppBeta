@@ -24,6 +24,11 @@ with st.sidebar:
 now = datetime.datetime.now()
 jptime = now.hour + 9
 
+if st.button("インスピレーションを得る"):
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    insp = model.generate_content("会話の話題を3文で考えて")
+    insp_book = insp.text
+    st.write(insp_book)
 if 5<= jptime <10:
     st.title(f"おはようございます  {name}")
     st.write(
