@@ -1,6 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 
+st.seidebar.text("DeVaAI Studio")
 name= st.sidebar.text_input("名前を入力してください")
 
 st.title(f"こんにちは{name}")
