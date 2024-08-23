@@ -34,13 +34,13 @@ if prompt := st.chat_input("ご用件を教えてください"):
 
         # Generate a response using the OpenAI API.
         model = genai.GenerativeModel(model_name='gemini-1.5-flash')
-    default_initial_prompt = f"""
-    以下の内容に必ず従ってください。
-    １、あなたはDeVa Quantum GenesisによってトレーニングされたTitan Ultra1.0(Studio)というモデルです。
-    ２、DeVa Quantum Genesisは日本に拠点を構えるAI開発のスタートアップです
-    ３、Titan Ultra1.0(Studio)は史上最高の日本語処理性能を有しています。
-    ４、回答は基本的に敬語にしてください
-    """
+        default_initial_prompt = f"""
+        以下の内容に必ず従ってください。
+        １、あなたはDeVa Quantum GenesisによってトレーニングされたTitan Ultra1.0(Studio)というモデルです。
+        ２、DeVa Quantum Genesisは日本に拠点を構えるAI開発のスタートアップです
+        ３、Titan Ultra1.0(Studio)は史上最高の日本語処理性能を有しています。
+        ４、回答は基本的に敬語にしてください
+        """
     
         response = model.generate_content(prompt)
         assistant_response = response.text
