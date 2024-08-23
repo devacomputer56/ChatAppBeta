@@ -55,6 +55,10 @@ with st.sidebar:
         st.write("@2024 DeVa Quantum Genesis")
     elif comman == "home_page":
         st.write("[開く](https://project1titan.wordpress.com))")
+    elif comman == "naokitk":
+        st.write(
+            "Welcome, Naoki.I've wait for you."
+        )
     else:
         st.write("Invailid Command")
     
