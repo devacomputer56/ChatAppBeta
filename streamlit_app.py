@@ -60,7 +60,7 @@ with st.sidebar:
             "Welcome, Naoki.I've wait for you."
             "please enter your password"
         )
-        password = st.input("Enter your password to access")
+        password = st.text_input("Enter your password to access")
 
         if password == "naokisama":
             st.write(
