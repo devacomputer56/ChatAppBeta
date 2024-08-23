@@ -1,3 +1,6 @@
+#Made by DeVa Quantum Genesis
+#Powerd by Google Gemini
+#Thanks  to Google Gemini
 import streamlit as st
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
@@ -14,17 +17,29 @@ with st.sidebar:
         "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください。　"
         " @2024 DeVa Quantum Genesis"
     )
+    
+    #Titan Kit
+    
     st.title("TitanKit")
+    
+    #名言を生成する
     if st.button("今日の名言を考えます"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         meigen = model.generate_content("今日の名言を一文であなたが考えてください")
         meigen_book = meigen.text
         st.write(meigen_book)
+    #本を教える
     if st.button("おすすめの本を教えます"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         book = model.generate_content("様々なジャンルでおすすめの本を教えてください")
         book_book = book.text
         st.write(book_book)
+    
+    if st.button("雑学を教えます"):
+        model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
+        zatu = model.generate_content("面白い雑学を５文以内でわかりやすく教えて")
+        zatu_book = zatu.text
+        st.write(zatu_book)
 
 
 if st.button("インスピレーションを得る"):
