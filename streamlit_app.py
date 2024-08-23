@@ -22,7 +22,7 @@ with st.sidebar:
         st.write("[開く](https://project1titan.wordpress.com)")
     if st.button("おすすめの本を教えます"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
-        book = model.generate_content("おすすめの本を教えてください")
+        book = model.generate_content("様々なジャンルでおすすめの本を教えてください")
         book_book = book.text
         st.write(book_book)
 
