@@ -24,18 +24,18 @@ A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
    $pip install google.generative ai
    ```
 
-5. Streamlit install
+4. Streamlit install
    
    ```
    $pip install streamlit
    ```
-6. Google generativelanguage
+5. Google generativelanguage
 
    ```
    $pip install google.ai.generativelanguage
    ```
 
-7. Plotly express
+6. Plotly express
 
     ```
     $pip install plotly.express
