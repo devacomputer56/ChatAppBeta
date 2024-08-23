@@ -55,7 +55,7 @@ elif comman == "company":
 elif comman == "home_page":
     st.write("[開く](https://project1titan.wordpress.com)をご確認ください。)")
 else:
-    st.write(Invailid Command)
+    st.write("Invailid Command")
     
 #Titan Ultra　会話のインスピレーションを得る
 if st.button("インスピレーションを得る"):
