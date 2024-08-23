@@ -50,9 +50,10 @@ elif 10<= jptime <17:
     )
 elif 17<= jptime or jptime<5 :
     st.title(f"こんばんは　{name}")
-    st.write(
-        "今日はどんな1日でしたか？"
-    )
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    fin = model.generate_content("1日の終わりの1日を労う文を3文で考えて")
+    fin_book = fin.text
+    st.write(fin_book)
 else :
     st.title("Time zone error")
 
