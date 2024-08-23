@@ -12,9 +12,6 @@ with st.sidebar:
     )
 
 now = datetime.datetime.now()
-
-st.write(f"{now}")
-
 jptime = now.hour + 9
 
 if 5<= jptime <10:
