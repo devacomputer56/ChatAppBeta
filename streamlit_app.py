@@ -74,10 +74,9 @@ if st.button("インスピレーションを得る"):
 
         # Generate a response using the OpenAI API.
         model = genai.GenerativeModel('gemini-1.5-flash')
-
-    
         response = model.generate_content(prompt)
         assistant_response = response.text
         st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+        
         with st.chat_message("assistant"):           
              st.write(assistant_response)
