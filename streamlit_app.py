@@ -44,18 +44,18 @@ with st.sidebar:
     st.title("Command")
 now = datetime.datetime.now()
 jptime = now.hour + 9
-    
-comman = st.sidebar.text_input("Input command")
 
-#Command動作
-if comman == "datetime":
-    st.write(jptime)
-elif comman == "company":
-    st.write("@2024 DeVa Quantum Genesis")
-elif comman == "home_page":
-    st.write("[開く](https://project1titan.wordpress.com)をご確認ください。)")
-else:
-    st.write("Invailid Command")
+#Command動作 
+comman = st.sidebar.text_input("Input command")
+with st.sidebar:
+    if comman == "datetime":
+        st.write(jptime)
+    elif comman == "company":
+        st.write("@2024 DeVa Quantum Genesis")
+    elif comman == "home_page":
+        st.write("[開く](https://project1titan.wordpress.com))")
+    else:
+        st.write("Invailid Command")
     
 #Titan Ultra　会話のインスピレーションを得る
 if st.button("インスピレーションを得る"):
