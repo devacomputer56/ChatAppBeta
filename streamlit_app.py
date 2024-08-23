@@ -8,9 +8,9 @@ name = st.sidebar.text_input("名前を教えてください")
 with st.sidebar:
     st.title("DeVaAI Studio")
     st.write(
-        f"こんにちは、{name}"
         "AIが生成するテキストには誤りが含まれる可能性があります。慎重に利用してください。 "
-    "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください."
+        "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください."
+        "2024 DeVa Quantum Genesis"
     )
 
 now = datetime.datetime.now()
