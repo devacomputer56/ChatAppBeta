@@ -16,6 +16,7 @@ jptime = now.hour + 9
 
 if 5<= jptime <10:
     st.title(f"おはようございます  {name}")
+    textColor="#000080"
 elif 10<= jptime <17:
     st.title(f"こんにちは　{name}")
 elif 17<= jptime or jptime<5 :
