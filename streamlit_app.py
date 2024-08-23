@@ -70,6 +70,9 @@ if prompt := st.chat_input("ご用件を教えてください"):
         st.markdown(prompt)
         
     model = genai.GenerativeModel('gemini-1.5-flash')
+    templa00=instructions
+    system_prompt = templa00
+    
     response = model.generate_content(prompt)
     assistant_response = response.text
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
