@@ -15,7 +15,8 @@ with st.sidebar:
     if st.button("今日の名言を考えます"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         meigen = model.generate_content("今日の名言を考えてください")
-        st.write(meigen)
+        meigen_book = meigen.text
+        st.write(meigen_book)
 
 
 now = datetime.datetime.now()
