@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
 import datetime, time as dt
-import plotly.express as pt
+import plotly.express as px
 
 page = st.sidebar.selectbox('ページを選択してください', ['Titan Ultra', 'Study Llm'])
 name = st.sidebar.text_input("名前を教えてください")
