@@ -10,7 +10,7 @@ with st.sidebar:
     st.write(
         f"こんにちは、{name}"
     )
-now = dt.datetime.now()
+now = dt.datetime.now().time()
 
 if 5<= now.hour <10:
     st.title(f"おはようございます  {name}")
