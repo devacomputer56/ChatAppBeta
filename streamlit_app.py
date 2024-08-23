@@ -10,7 +10,7 @@ with st.sidebar:
     st.write(
         f"こんにちは、{name}"
     )
-now = datetime.today()
+now = datetime.time()
 if 5<= now <10:
     st.title(f"おはようございます  {name}")
 elif 10<= now <17:
