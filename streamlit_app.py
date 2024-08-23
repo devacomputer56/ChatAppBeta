@@ -80,9 +80,3 @@ if prompt := st.chat_input("ご用件を教えてください"):
         st.session_state.messages.append({"role": "assistant", "content": assistant_response})
         with st.chat_message("assistant"):           
              st.write(assistant_response)
-if st.session_state.Clear:
-    if st.button('clear chat history'):
-        st.session_state.messages = [] # メッセージのリセット
-        full_response = ""
-        st.session_state.Clear = False # クリア状態をリセット
-        st.experimental_rerun()
