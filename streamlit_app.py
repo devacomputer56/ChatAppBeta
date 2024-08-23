@@ -71,6 +71,11 @@ with st.sidebar:
             )
         else:
             st.write("It's wrong.")
+    elif comman == "ceo_placex":
+        st.write(
+            "ceoplace is Japan"
+            "Japan, Kanagawa"
+        )
     else:
         st.write("Invailid Command")
     
