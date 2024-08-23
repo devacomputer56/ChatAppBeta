@@ -45,6 +45,14 @@ with st.sidebar:
 now = datetime.datetime.now()
 jptime = now.hour + 9
 
+def over24Hdatetime(year, month, day, hour, minute):
+
+    minutes = int(hour)*60 + int(minute)
+    dt = datetime.datetime(year=year, month=month, day=day)
+    dt += datetime.timedelta(mitutes=minutes)
+    return dt
+    dt14 = over24Hdatetime()
+
 #Command動作 
 comman = st.sidebar.text_input("Input command")
 with st.sidebar:
