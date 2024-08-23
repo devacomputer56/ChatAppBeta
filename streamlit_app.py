@@ -6,8 +6,7 @@ name = st.sidebar.text_input("名前を教えてください")
 with st.sidebar:
     st.title("DeVaAI Studio")
     st.write(
-        "Hello!"
-        f"{name}"
+        f"ようこそ、{name}。お会いできて嬉しいです。"
     )
    
 st.title(f"こんにちは  {name}")
