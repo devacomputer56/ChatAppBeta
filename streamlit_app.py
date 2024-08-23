@@ -24,7 +24,7 @@ with st.sidebar:
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         book = model.generate_content("おすすめの本を教えてください")
         book_book = book.text
-        st.write(bool_book)
+        st.write(book_book)
 
 
 now = datetime.datetime.now()
