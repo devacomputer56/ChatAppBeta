@@ -1,10 +1,10 @@
 import streamlit as st
 import google.generativeai as genai
 
-
+ name = st.sidebar.text_input("名前を教えてください")
 with st.sidebar:
     st.title("DeVaAI Studio")
-    name = text_input("名前を教えてください")
+   
 
 st.title(f"{name}")
 st.write(
