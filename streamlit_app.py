@@ -9,6 +9,8 @@ with st.sidebar:
     st.title("DeVaAI Studio")
     st.write(
         f"こんにちは、{name}"
+        "AIが生成するテキストには誤りが含まれる可能性があります。慎重に利用してください。 "
+    "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください."
     )
 
 now = datetime.datetime.now()
@@ -16,16 +18,22 @@ jptime = now.hour + 9
 
 if 5<= jptime <10:
     st.title(f"おはようございます  {name}")
+    st.write(
+        "今日はどんな一日となりそうですか？"
+    )
 elif 10<= jptime <17:
     st.title(f"こんにちは　{name}")
+    st.write(
+        "お会いできて嬉しいです"
+    )
 elif 17<= jptime or jptime<5 :
     st.title(f"こんばんは　{name}")
+    st.write(
+        "今日はどんな1日でしたか？"
+    )
 else :
     st.title("Time zone error")
-st.write(
-    "AIが生成するテキストには誤りが含まれる可能性があります。慎重に利用してください。 "
-    "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください."
-)
+
 genai.configure(api_key="AIzaSyAyK2A2Ove7VnXEahCBB9SxEPoyLeeVJR0")
 if "messages" not in st.session_state:
         st.session_state.messages = []
