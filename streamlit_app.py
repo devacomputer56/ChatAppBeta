@@ -11,11 +11,11 @@ with st.sidebar:
         f"こんにちは、{name}"
     )
 now = datetime.today()
-if 5>= now <10:
+if 5<= now <10:
     st.title(f"おはようございます  {name}")
-elif 10>= now <17:
+elif 10<= now <17:
     st.title(f"こんにちは　{name}")
-elif 17>= now <5 :
+elif 17<= now <5 :
     st.title(f"こんばんは　{name}")
 else :
     st.title("Time zone error")
