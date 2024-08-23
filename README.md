@@ -36,5 +36,5 @@ A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
    ```
 7.  ploty_express
    ```
-   $pip install ploty_express
+   $pip install ploty.express
    ```
