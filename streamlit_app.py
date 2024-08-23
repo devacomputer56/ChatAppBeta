@@ -55,9 +55,13 @@ with st.sidebar:
         st.write("@2024 DeVa Quantum Genesis")
     elif comman == "home_page":
         st.write("[開く](https://project1titan.wordpress.com))")
-    elif comman == "naokitk":
+    elif comman == "naoki.tk":
         st.write(
             "Welcome, Naoki.I've wait for you."
+            f"This is japan time{jptime}"
+            f"This is datetime{now}"
+            "This is now model Google Gemini 1.5 Flash"
+            f"This is your name {name}"
         )
     else:
         st.write("Invailid Command")
