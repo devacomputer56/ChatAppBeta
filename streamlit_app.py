@@ -14,7 +14,7 @@ with st.sidebar:
     st.title("DeVaAI Studio")
     st.write(
         "AIが生成するテキストには誤りが含まれる可能性があります。慎重に利用してください。 "
-        "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください。　"
+        "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください。)　"
         " @2024 DeVa Quantum Genesis"
     )
     
@@ -41,16 +41,30 @@ with st.sidebar:
         zatu_book = zatu.text
         st.write(zatu_book)
 
+    st.title("Command")
+now = datetime.datetime.now()
+jptime = now.hour + 9
+    
+comman = st.sidebar.text_input("Input command")
 
+#Command動作
+if comman == "datetime":
+    st.write(jptime)
+elif comman == "company":
+    st.write("@2024 DeVa Quantum Genesis")
+elif comman == "home_page":
+    st.write("[開く](https://project1titan.wordpress.com)をご確認ください。)")
+else:
+    st.write(Invailid Command)
+    
+#Titan Ultra　会話のインスピレーションを得る
 if st.button("インスピレーションを得る"):
     model = genai.GenerativeModel('gemini-1.5-flash')
     insp = model.generate_content("会話の話題を3文で考えて")
     insp_book = insp.text
     st.write(insp_book)
     
-now = datetime.datetime.now()
-jptime = now.hour + 9
-    
+#時間帯によって変わるテキスト+Titan Ultraによって生成される挨拶文
 if 5<= jptime <10:
     st.title(f"おはようございます  {name}")
     model = genai.GenerativeModel('gemini-1.5-flash')
