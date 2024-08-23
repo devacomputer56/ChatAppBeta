@@ -12,6 +12,7 @@ with st.sidebar:
         "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください。　"
         " @2024 DeVa Quantum Genesis"
     )
+    st.subtitle("ショートカットで簡単に答えを得ましょう。")
     if st.button("今日の名言を考えます"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         meigen = model.generate_content("今日の名言を一文であなたが考えてください")
