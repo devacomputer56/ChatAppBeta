@@ -73,12 +73,7 @@ if st.button("インスピレーションを得る"):
             st.markdown(prompt)
 
         # Generate a response using the OpenAI API.
-        model = genai.GenerativeModel(
-            "gemini-1.5-flash",
-            system_instruction=[
-                instructions
-            ],
-        )
+        model = genai.GenerativeModel('gemini-1.5-flash')
 
     
         response = model.generate_content(prompt)
