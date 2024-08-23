@@ -6,7 +6,10 @@ name = st.sidebar.text_input("名前を教えてください")
 with st.sidebar:
     st.title("DeVaAI Studio")
     st.write(
-        "このアプリではDeVaの最先端の研究を体験することができます。"
+        "ここではDeVaの最先端を体験することができます。"
+        "AIは誤った内容を生成する場合があります。注意してご利用ください。"
+        "[DeVa Quantum Genesis24](https://project1titan.wordpress.com)"
+        f"{name}、始めましょう！"
     )
    
 st.title(f"こんにちは{name}")
