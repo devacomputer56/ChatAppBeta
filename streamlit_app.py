@@ -10,10 +10,10 @@ with st.sidebar:
     st.write(
         f"こんにちは、{name}"
     )
-japan_time = datetime.datetime.now(
-   datetime.timezone(datetime.timedelta(hours=9))
-)
+
 now = datetime.datetime.now()
+
+st.write(f"{now}")
 
 if 5<= now.hour <10:
     st.title(f"おはようございます  {name}")
