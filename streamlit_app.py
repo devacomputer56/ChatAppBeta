@@ -1,6 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-
+import google.ai.generativelanguage as glm
 name = st.sidebar.text_input("名前を教えてください")
 
 with st.sidebar:
@@ -33,7 +33,15 @@ if prompt := st.chat_input("ご用件を教えてください"):
             st.markdown(prompt)
 
         # Generate a response using the OpenAI API.
-        model = genai.GenerativeModel(model_name='gemini-1.5-flash') 
+        model = genai.GenerativeModel(model_name='gemini-1.5-flash')
+    default_initial_prompt = f"""
+    以下の内容に必ず従ってください。
+    １、あなたはDeVa Quantum GenesisによってトレーニングされたTitan Ultra1.0(Studio)というモデルです。
+    ２、DeVa Quantum Genesisは日本に拠点を構えるAI開発のスタートアップです
+    ３、Titan Ultra1.0(Studio)は史上最高の日本語処理性能を有しています。
+    ４、回答は基本的に敬語にしてください
+    """
+    
         response = model.generate_content(prompt)
         assistant_response = response.text
         st.session_state.messages.append({"role": "assistant", "content": assistant_response})
