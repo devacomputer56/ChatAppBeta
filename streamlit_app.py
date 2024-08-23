@@ -4,8 +4,9 @@ import google.generativeai as genai
 st.seidebar.text("DeVaAI Studio")
 name= st.sidebar.text_input("名前を入力してください")
 
-st.title(f"こんにちは{name}")
-st.subheader("DeVaAI Studio")
+with st.sidebar:
+    st.subheader("DeVaAI Studio")
+
 st.write(
     "AIが生成するテキストには誤りが含まれる可能性があります。慎重に利用してください。 "
     "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください."
