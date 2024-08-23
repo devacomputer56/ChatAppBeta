@@ -17,6 +17,8 @@ with st.sidebar:
         meigen = model.generate_content("今日の名言を一文であなたが考えてください")
         meigen_book = meigen.text
         st.write(meigen_book)
+    if st.button("公式ページ"):
+        st.write("[開く](https://project1titan.wordpress.com)")
 
 
 now = datetime.datetime.now()
