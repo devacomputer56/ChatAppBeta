@@ -12,6 +12,8 @@ with st.sidebar:
         "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください。　"
         " @2024 DeVa Quantum Genesis"
     )
+    if st.button("今日の名言を考えます"):
+        st.write("現在準備中")
 
 now = datetime.datetime.now()
 jptime = now.hour + 9
