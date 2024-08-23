@@ -1,5 +1,3 @@
-$ pip install google.gemerativeai
-
 import streamlit as st
 import google.generativeai as genai
 
