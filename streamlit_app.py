@@ -34,8 +34,8 @@ if st.button("インスピレーションを得る"):
     insp_book = insp.text
     st.write(insp_book)
     
-    now = datetime.datetime.now()
-    jptime = now.hour + 9
+now = datetime.datetime.now()
+jptime = now.hour + 9
     
 if 5<= jptime <10:
     st.title(f"おはようございます  {name}")
