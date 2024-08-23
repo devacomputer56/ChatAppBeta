@@ -58,11 +58,19 @@ with st.sidebar:
     elif comman == "naoki.tk":
         st.write(
             "Welcome, Naoki.I've wait for you."
-            f"This is japan time{jptime}"
-            f"This is datetime{now}"
-            "This is now model Google Gemini 1.5 Flash"
-            f"This is your name {name}"
+            "please enter your password"
         )
+        password = st.input("Enter your password to access")
+
+        if password == "naokisama":
+            st.write(
+                f"This is japan time{jptime}"
+                f"This is datetime{now}"
+                "This is now model Google Gemini 1.5 Flash"
+                f"This is your name {name}"
+            )
+        else:
+            st.write("It's wrong.")
     else:
         st.write("Invailid Command")
     
