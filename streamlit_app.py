@@ -15,11 +15,13 @@ now = datetime.datetime.now()
 
 st.write(f"{now}")
 
-if 5<= now.hour <10:
+jptime = now.hour + p
+
+if 5<= jptime <10:
     st.title(f"おはようございます  {name}")
-elif 10<= now.hour <17:
+elif 10<= jptime <17:
     st.title(f"こんにちは　{name}")
-elif 17<= now.hour or now.hour<5 :
+elif 17<= jptime or jptime<5 :
     st.title(f"こんばんは　{name}")
 else :
     st.title("Time zone error")
