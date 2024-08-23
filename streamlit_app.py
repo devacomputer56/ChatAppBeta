@@ -46,9 +46,10 @@ if 5<= jptime <10:
     st.write(star_book)
 elif 10<= jptime <17:
     st.title(f"こんにちは　{name}")
-    st.write(
-        "お会いできて嬉しいです"
-    )
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    kon = model.generate_content("こんにちはに続く挨拶を3文で考えて")
+    kon_book = kon.text
+    st.write(kon_book)
 elif 17<= jptime or jptime<5 :
     st.title(f"こんばんは　{name}")
     model = genai.GenerativeModel('gemini-1.5-flash')
