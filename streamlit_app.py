@@ -10,8 +10,15 @@ with st.sidebar:
     st.write(
         f"こんにちは、{name}"
     )
-   
-st.title(f"こんにちは  {name}")
+now = datetime.today()
+if now <= 5 num <10:
+    st.title(f"おはようございます  {name}")
+elif now <=10 num <17:
+    st.title(f"こんにちは　{name}")
+elif now <=17 num <5 :
+    st.title(f"こんばんは　{name"})
+else :
+    st.title("Time zone error")
 st.write(
     "AIが生成するテキストには誤りが含まれる可能性があります。慎重に利用してください。 "
     "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください."
