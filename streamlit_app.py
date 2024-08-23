@@ -1,7 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
-import datetime, time
+import datetime, time as dt
 
 name = st.sidebar.text_input("名前を教えてください")
 
@@ -10,7 +10,8 @@ with st.sidebar:
     st.write(
         f"こんにちは、{name}"
     )
-now = datetime.datetime.now().hour()
+now = datetime.datetime.now()
+
 if 5<= now <10:
     st.title(f"おはようございます  {name}")
 elif 10<= now <17:
