@@ -64,8 +64,6 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-    # Create a chat input field to allow the user to enter a message. This will display
-    # automatically at the bottom of the page.
 if prompt := st.chat_input("ご用件を教えてください"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
