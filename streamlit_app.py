@@ -13,7 +13,6 @@ with st.sidebar:
         "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください。　"
         " @2024 DeVa Quantum Genesis"
     )
-    
     st.title("TitanKit")
     if st.button("今日の名言を考えます"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
@@ -34,9 +33,9 @@ if st.button("インスピレーションを得る"):
     insp = model.generate_content("会話の話題を3文で考えて")
     insp_book = insp.text
     st.write(insp_book)
-
-now = datetime.datetime.now()
-jptime = now.hour + 9
+    
+    now = datetime.datetime.now()
+    jptime = now.hour + 9
     
 if 5<= jptime <10:
     st.title(f"おはようございます  {name}")
