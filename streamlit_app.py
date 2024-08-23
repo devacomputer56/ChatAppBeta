@@ -45,10 +45,6 @@ with st.sidebar:
 now = datetime.datetime.now()
 jptime = now.hour + 9
 
-if now.hour =15:
-    jptime = 0
-elif now.hour >15:
-    jptime = now.date+1 and now.hour-4
 #Command動作 
 comman = st.sidebar.text_input("Input command")
 with st.sidebar:
