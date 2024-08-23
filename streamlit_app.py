@@ -68,9 +68,10 @@ if prompt := st.chat_input("ご用件を教えてください"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        response = model.generate_content(prompt)
-        assistant_response = response.text
-        st.session_state.messages.append({"role": "assistant", "content": assistant_response})
-        with st.chat_message("assistant"):           
-            st.write(assistant_response)
+        
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    response = model.generate_content(prompt)
+    assistant_response = response.text
+    st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+    with st.chat_message("assistant"):           
+        st.write(assistant_response)
