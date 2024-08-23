@@ -15,7 +15,7 @@ now = datetime.datetime.now()
 
 st.write(f"{now}")
 
-jptime = now.hour + p
+jptime = now.hour + 9
 
 if 5<= jptime <10:
     st.title(f"おはようございます  {name}")
