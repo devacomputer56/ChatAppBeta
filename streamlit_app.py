@@ -70,7 +70,7 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("ご用件を教えてください"):
         st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
-            st.markdown(prompt)
+        st.markdown(prompt)
 
         # Generate a response using the OpenAI API.
 model = genai.GenerativeModel('gemini-1.5-flash')
