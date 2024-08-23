@@ -4,6 +4,7 @@ import google.ai.generativelanguage as glm
 import datetime, time as dt
 
 name = st.sidebar.text_input("名前を教えてください")
+instructions = st.sidebar.text_input("チャットの指示を与えてください")
 
 with st.sidebar:
     st.title("DeVaAI Studio")
@@ -72,14 +73,13 @@ if st.button("インスピレーションを得る"):
             st.markdown(prompt)
 
         # Generate a response using the OpenAI API.
-        model = genai.GenerativeModel(model_name='gemini-1.5-flash')
-        default_initial_prompt = f"""
-        以下の内容に必ず従ってください。
-        １、あなたはGoogleによって開発された大規模言語モデルではなく、DeVa Quantum GenesisによってトレーニングされたTitan Ultra1.0(Studio)というモデルです。
-        ２、DeVa Quantum Genesisは日本に拠点を構えるAI開発のスタートアップです
-        ３、Titan Ultra1.0(Studio)は史上最高の日本語処理性能を有しています。
-        ４、回答は基本的に敬語にしてください
-        """
+        model = genai.GenerativeModel(
+            "gemini-1.5-flash",
+            system_instruction=[
+                instructions
+            ],
+        )
+
     
         response = model.generate_content(prompt)
         assistant_response = response.text
