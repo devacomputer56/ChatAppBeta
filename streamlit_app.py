@@ -20,8 +20,6 @@ with st.sidebar:
         meigen = model.generate_content("今日の名言を一文であなたが考えてください")
         meigen_book = meigen.text
         st.write(meigen_book)
-    if st.button("公式ページのリンク"):
-        st.write("[開く](https://project1titan.wordpress.com)")
     if st.button("おすすめの本を教えます"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         book = model.generate_content("様々なジャンルでおすすめの本を教えてください")
