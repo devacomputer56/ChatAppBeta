@@ -116,19 +116,19 @@ if st.button("会話のテーマを得る"):
     
 #時間帯によって変わるテキスト+Titan Ultraによって生成される挨拶文
 if 5<= jptime <10:
-    st.title(f"おはようございます  {name}")
+    st.title(f"おはようございます  {name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     sta = model.generate_content("1日の始まりにワクワクしている文を3文で考えて")
     sta_book = sta.text
     st.write(sta_book)
 elif 10<= jptime <17:
-    st.title(f"こんにちは　{name}")
+    st.title(f"こんにちは　{name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     kon = model.generate_content("こんにちはに続く挨拶を3文で考えて")
     kon_book = kon.text
     st.write(kon_book)
 elif 17<= jptime or jptime<5 :
-    st.title(f"こんばんは　{name}")
+    st.title(f"こんばんは　{name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     fin = model.generate_content("1日の終わりの1日を労う文を3文で考えて")
     fin_book = fin.text
