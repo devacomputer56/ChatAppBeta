@@ -92,7 +92,7 @@ if 5<= jptime <10:
     model = genai.GenerativeModel('gemini-1.5-flash')
     sta = model.generate_content("1日の始まりにワクワクしている文を3文で考えて")
     sta_book = sta.text
-    st.write(star_book)
+    st.write(sta_book)
 elif 10<= jptime <17:
     st.title(f"こんにちは　{name}")
     model = genai.GenerativeModel('gemini-1.5-flash')
