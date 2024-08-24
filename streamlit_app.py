@@ -7,6 +7,10 @@ import google.ai.generativelanguage as glm
 import datetime, time as dt
 
 name = st.text_input("名前を教えてください")
+if name == None:
+    user_name = ("ゲスト")
+else :
+    user_name = name
 instructions = st.sidebar.text_input("役割を与えてください")
 
 with st.sidebar:
@@ -116,19 +120,19 @@ if st.button("会話のテーマを得る"):
     
 #時間帯によって変わるテキスト+Titan Ultraによって生成される挨拶文
 if 5<= jptime <10:
-    st.title(f"おはようございます  {name}さん")
+    st.title(f"おはようございます  {user_name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     sta = model.generate_content("1日の始まりにワクワクしている文を3文で考えて")
     sta_book = sta.text
     st.write(sta_book)
 elif 10<= jptime <17:
-    st.title(f"こんにちは　{name}さん")
+    st.title(f"こんにちは　{user_name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     kon = model.generate_content("こんにちはに続く挨拶を3文で考えて")
     kon_book = kon.text
     st.write(kon_book)
 elif 17<= jptime or jptime<5 :
-    st.title(f"こんばんは　{name}さん")
+    st.title(f"こんばんは　{user_name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     fin = model.generate_content("1日の終わりの1日を労う文を3文で考えて")
     fin_book = fin.text
