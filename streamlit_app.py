@@ -47,7 +47,7 @@ with st.sidebar:
         st.write(zatu_book)
 
     if st.button("会話の話題を提案して"):
-        model = genai.GenerativeModel(model_name= = 'gemini-1.5-flash')
+        model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         insp = model.generate_content("会話の話題を3文で提案して")
         insp_book = insp.text
         st.write(insp_book)
