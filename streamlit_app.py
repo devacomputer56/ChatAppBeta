@@ -23,19 +23,19 @@ with st.sidebar:
     st.title("TitanKit")
     
     #名言を生成する
-    if st.button("今日の名言を考えて"):
+    if st.button("今日の名言を考えてください"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         meigen = model.generate_content("今日の名言を一文であなたが考えてください")
         meigen_book = meigen.text
         st.write(meigen_book)
     #本を教える
-    if st.button("おすすめの本を教えて"):
+    if st.button("おすすめの本を教えてください"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         book = model.generate_content("様々なジャンルでおすすめの本を教えてください")
         book_book = book.text
         st.write(book_book)
     
-    if st.button("雑学を教えて"):
+    if st.button("雑学を教えてください"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
         zatu = model.generate_content("面白い雑学を５文以内でわかりやすく教えて")
         zatu_book = zatu.text
