@@ -10,10 +10,11 @@ import datetime, time as dt
 name = st.sidebar.text_input("名前を教えてください")
 instructions = st.sidebar.text_input("役割を与えてください")
 
-if instructions == None:
-    st.write("キャラが設定されていません")
-else:
-    st.write("キャラが設定されています。")
+with st.sidebar:
+    if instructions == None:
+        st.write("キャラが設定されていません")
+    else:
+        st.write("キャラが設定されています。")
 
 with st.sidebar:
     st.title("DeVaAI Studio Beta")
