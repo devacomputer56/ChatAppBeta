@@ -103,7 +103,7 @@ with st.sidebar:
         st.write("Invailid Command")
     
 #Titan Ultra　会話のインスピレーションを得る
-if st.button("インスピレーションを得る"):
+if st.button("会話のテーマを得る"):
     model = genai.GenerativeModel('gemini-1.5-flash')
     insp = model.generate_content("会話の話題を3文で考えて")
     insp_book = insp.text
