@@ -7,10 +7,11 @@ import google.ai.generativelanguage as glm
 import datetime, time as dt
 
 name = st.text_input("名前を教えてください")
-if name == None:
-    user_name = ("ゲスト")
-else :
-    user_name = name
+def check_str (name):
+    if name:
+        user_name = name
+    else :
+        user_name = ("Guest")
 instructions = st.sidebar.text_input("役割を与えてください")
 
 with st.sidebar:
