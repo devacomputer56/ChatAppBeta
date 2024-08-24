@@ -12,9 +12,9 @@ instructions = st.sidebar.text_input("役割を与えてください")
 
 with st.sidebar:
     if instructions == None:
-        st.write("キャラが設定されていません")
+        st.write("役割が設定されていません")
     else:
-        st.write("キャラが設定されています。")
+        st.write("役割が設定されています。")
 
 with st.sidebar:
     st.title("DeVaAI Studio Beta")
