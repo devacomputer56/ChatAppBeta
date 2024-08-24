@@ -128,6 +128,8 @@ elif 17<= jptime or jptime<5 :
     fin = model.generate_content("1日の終わりの1日を労う文を3文で考えて")
     fin_book = fin.text
     st.write(fin_book)
+elif 24<=jptime :
+    st.title("おはようございます")
 else :
     st.title("Time zone error")
 
