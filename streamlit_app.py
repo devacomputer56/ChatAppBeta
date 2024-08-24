@@ -133,7 +133,7 @@ elif 10<= jptime <17:
     kon_book = kon.text
     st.write(kon_book)
 elif 17<= jptime or jptime<5 :
-    st.title(f"こんばんは　{your_name}さん")
+    st.title(f"こんばんは　{name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     fin = model.generate_content("1日の終わりの1日を労う文を3文で考えて")
     fin_book = fin.text
