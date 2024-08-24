@@ -76,6 +76,26 @@ with st.sidebar:
             "ceoplace is Japan"
             "Japan, Kanagawa"
         )
+    elif comman == "how_to_use":
+        st.write("I tell you how to use this app in Japanese.")
+        st.write(
+            "使い方を日本語でご説明いたします。"
+            "テキスト入力欄にAIに尋ねたい内容をお書きください。"
+            "その際、Enterキーを入力するとすぐに送信されるため、ご注意ください。"
+            "Titan Kitではチャットを一切する必要がなく、すぐに知りたい情報を素早く得ることができます。"
+            "Command機能はさまざまなアルファ機能にアクセスすることができます。"
+            "正しいCommand keyを入力していただけるとさまざまな情報を得ることができます。"
+                )
+        st.write(
+            "Quantum Leapについてご説明します。"
+            "Quantum Leapは当アプリに配信されるアップデートの名称です。"
+            "公式BlogやInstagramなどで更新情報をお伝えできます。"
+            "Quantum Leapは手動でインストールすることなく、自動的にアップデートされます。"
+        st.write(
+            "フィードバックを送信したい場合についてご説明いたします。"
+            "フィードバックを送信する場合、Feedback_leap　とCommandを入力していただくか、公式ウェブサイトの方からご送信ください。"
+        )
+        )
     else:
         st.write("Invailid Command")
     
