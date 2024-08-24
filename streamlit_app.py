@@ -5,7 +5,6 @@ import streamlit as st
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
 import datetime, time as dt
-from vertexai.generative_models import GenerativeModel
 
 name = st.sidebar.text_input("名前を教えてください")
 instructions = st.sidebar.text_input("役割を与えてください")
