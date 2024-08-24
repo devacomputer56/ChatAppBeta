@@ -45,6 +45,7 @@ with st.sidebar:
         zatu = model.generate_content("面白い雑学を５文以内でわかりやすく教えて")
         zatu_book = zatu.text
         st.write(zatu_book)
+        
     if st.button("会話のテーマを得る"):
         model = genai.GenerativeModel('gemini-1.5-flash')
         insp = model.generate_content("会話の話題を3文で考えて")
