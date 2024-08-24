@@ -6,7 +6,7 @@ import google.generativeai as genai
 import google.ai.generativelanguage as glm
 import datetime, time as dt
 
-name = st.sidebar.text_input("名前を教えてください")
+name = st.text_input("名前を教えてください")
 instructions = st.sidebar.text_input("役割を与えてください")
 
 with st.sidebar:
