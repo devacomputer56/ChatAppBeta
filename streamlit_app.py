@@ -11,7 +11,7 @@ name = st.sidebar.text_input("名前を教えてください")
 instructions = st.sidebar.text_input("役割を与えてください")
 
 with st.sidebar:
-    st.title("DeVaAI Studio(Beta)")
+    st.title("DeVaAI Studio Beta")
     st.write(
         "AIが生成するテキストには誤りが含まれる可能性があります。慎重に利用してください。 "
         "詳しくは[公式サイト](https://project1titan.wordpress.com)をご確認ください。)　"
