@@ -8,7 +8,7 @@ import datetime, time as dt
 
 name = st.text_input("名前を教えてください")
 def check_str (name):
-    if name = name:
+    if name:
         your_name = name
     else :
         your_name = ("Guest")
