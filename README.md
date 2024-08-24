@@ -38,7 +38,7 @@ A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
 6. Plotly express
 
     ```
-    $pip install plotly.express
+    $pip install vertexai.generative_models
     ```
 
 streamlit_app.py
