@@ -154,7 +154,7 @@ if prompt := st.chat_input("ご用件を教えてください"):
     with st.chat_message("user"):
         st.markdown(prompt)
         with st.sidebar:
-            st.write(prompt)
+            text1 = st.write(prompt)
     
     model = genai.GenerativeModel('gemini-1.5-flash')
     templa00=instructions
