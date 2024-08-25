@@ -152,7 +152,9 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("ご用件を教えてください"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
-        text1 = st.markdown(prompt)
+        st.markdown(prompt)
+        with st.sidebar:
+            st.write(prompt)
     
     model = genai.GenerativeModel('gemini-1.5-flash')
     templa00=instructions
