@@ -166,5 +166,7 @@ with st.sidebar:
         add = st.text_input("さらに尋ねてみてください。")
         model = genai.GenerativeModel('gemini-1.5-flash')
         fut = model.generate_content(f"先ほど私は{prompt}という質問をしてあなたは{response}という回答をしました。それについてさらに{add}という質問があります。答えてください。")
+        fut_book = fut.text
+        st.write(fut_book)
     
     
