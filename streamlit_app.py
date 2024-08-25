@@ -167,13 +167,11 @@ if prompt := st.chat_input("ご用件を教えてください"):
         st.write(assistant_response)
 
 with st.sidebar:
-    if st.button("再生成する") :
-        text = st.sidebar.text_input("質問を入力してください")
-
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        fut = model.generate_content(f"{text}という質問をもう一度考えてください")
-        fut_book = fut.text
-        st.write(f"Your question is : {text}")
-        st.write(fut_book)
+    text = st.sidebar.text_input("質問を入力してください")
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    fut = model.generate_content(f"{text}という質問をもう一度考えてください")
+    fut_book = fut.text
+    st.write(f"Your question is : {text}")
+    st.write(fut_book)
     
     
