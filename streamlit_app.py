@@ -42,7 +42,7 @@ with st.sidebar:
     if st.button("学習の計画を立ててください"):
         genai.configure(api_key="AIzaSyAyK2A2Ove7VnXEahCBB9SxEPoyLeeVJR0")
     if "messages" not in st.session_state:
-    st.session_state.messages = []
+        st.session_state.messages = []
 
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
