@@ -108,6 +108,9 @@ with st.sidebar:
             "フィードバックを送信したい場合についてご説明いたします。"
             "フィードバックを送信する場合、Feedback_leap　とCommandを入力していただくか、公式ウェブサイトの方からご送信ください。"
         )
+
+    elif comman == "prompt" :
+        st.write(prompt)
        
     else:
         st.write("Invailid Command")
