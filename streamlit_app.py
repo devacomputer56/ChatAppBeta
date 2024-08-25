@@ -115,13 +115,13 @@ with st.sidebar:
     
 #時間帯によって変わるテキスト+Titan Ultraによって生成される挨拶文
 if 5<= jptime <10:
-    st.title(f"おはようございます  {your_name}さん")
+    st.title(f"おはようございます  {name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     sta = model.generate_content("1日の始まりにワクワクしている文を3文で考えて")
     sta_book = sta.text
     st.write(sta_book)
 elif 10<= jptime <17:
-    st.title(f"こんにちは　{your_name}さん")
+    st.title(f"こんにちは　{name}さん")
     model = genai.GenerativeModel('gemini-1.5-flash')
     kon = model.generate_content("こんにちはに続く挨拶を3文で考えて")
     kon_book = kon.text
@@ -163,7 +163,8 @@ if prompt := st.chat_input("ご用件を教えてください"):
 
 with st.sidebar:
     if st.button :
+        add = st.input("さらに尋ねてみてください。")
         model = genai.GenerativeModel('gemini-1.5-flash')
-        fut = model.generate_content("こんにちは")
+        fut = model.generate_content(f"先ほど私は{prompt}という質問をしてあなたは{assistant_response}という回答をしました。それについてさらに{add}という質問があります。答えてください。")
     
     
