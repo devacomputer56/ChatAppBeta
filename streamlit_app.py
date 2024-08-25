@@ -160,3 +160,10 @@ if prompt := st.chat_input("ご用件を教えてください"):
     st.session_state.messages.append({"role": "assistant", "content": assistant_response})
     with st.chat_message("assistant"):           
         st.write(assistant_response)
+
+with st.sidebar:
+    if st.button :
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        fut = model.generate_content("こんにちは")
+    
+    
