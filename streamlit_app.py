@@ -49,22 +49,22 @@ with st.sidebar:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    if prompt := st.chat_input("ご用件を教えてください"):
-        st.session_state.messages.append({"role": "user", "content": prompt})
+    if prompt1 := st.chat_input("ご用件を教えてください"):
+        st.session_state.messages.append({"role": "user", "content": prompt1})
     with st.chat_message("user"):
-        st.markdown(prompt)
+        st.markdown(prompt1)
     with st.sidebar:
-        st.write(f"あなたの最新の質問 : 「{prompt}」")
+        st.write(f"あなたの最新の質問 : 「{prompt1}」")
     
     model = genai.GenerativeModel('gemini-1.5-flash')
     templa00=instructions
     system_prompt = templa00
     
-    response = model.generate_content(prompt)
-    assistant_response = response.text
-    st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+    response1 = model.generate_content(prompt1)
+    assistant_response1 = response1.text
+    st.session_state.messages.append({"role": "assistant", "content": assistant_response1})
     with st.chat_message("assistant"):           
-        st.write(assistant_response)
+        st.write(assistant_response1)
     
     if st.button("雑学を教えてください"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
