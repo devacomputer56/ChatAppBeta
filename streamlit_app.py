@@ -167,9 +167,10 @@ if prompt := st.chat_input("ご用件を教えてください"):
 with st.sidebar:
     if st.button("再生成する") :
         add = st.text_input("先ほどの質問をここに入力してください")
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        fut = model.generate_content(f"{add}という質問をもう一度考えてください")
-        fut_book = fut.text
-        st.write(fut_book)
+        if st.button("実行しますか") :
+            model = genai.GenerativeModel('gemini-1.5-flash')
+            fut = model.generate_content(f"{add}という質問をもう一度考えてください")
+            fut_book = fut.text
+            st.write(fut_book)
     
     
