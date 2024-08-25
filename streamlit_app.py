@@ -171,7 +171,7 @@ with st.sidebar:
         model = genai.GenerativeModel('gemini-1.5-flash')
         fut = model.generate_content(f"{prompt}という質問をもう一度考えてください")
         fut_book = fut.text
-        st.write(f"Your question is : {text1}")
+        st.write(f"Your question is : {prompt}")
         st.write(fut_book)
     
     
