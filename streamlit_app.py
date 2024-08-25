@@ -39,11 +39,32 @@ with st.sidebar:
         meigen_book = meigen.text
         st.write(meigen_book)
     #本を教える
-    if st.button("おすすめの本を教えてください"):
-        model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
-        book = model.generate_content("様々なジャンルでおすすめの本を教えてください")
-        book_book = book.text
-        st.write(book_book)
+    if st.button("学習の計画を立ててください"):
+        genai.configure(api_key="AIzaSyAyK2A2Ove7VnXEahCBB9SxEPoyLeeVJR0")
+    if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+    # Display the existing chat messages via `st.chat_message`.
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    if prompt := st.chat_input("ご用件を教えてください"):
+        st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.markdown(prompt)
+    with st.sidebar:
+        st.write(f"あなたの最新の質問 : 「{prompt}」")
+    
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    templa00=instructions
+    system_prompt = templa00
+    
+    response = model.generate_content(prompt)
+    assistant_response = response.text
+    st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+    with st.chat_message("assistant"):           
+        st.write(assistant_response)
     
     if st.button("雑学を教えてください"):
         model = genai.GenerativeModel(model_name = 'gemini-1.5-flash')
@@ -166,12 +187,3 @@ if prompt := st.chat_input("ご用件を教えてください"):
     with st.chat_message("assistant"):           
         st.write(assistant_response)
 
-with st.sidebar:
-    text = st.sidebar.text_input("質問を入力してください")
-    model = genai.GenerativeModel('gemini-1.5-flash')
-    fut = model.generate_content(f"{text}という質問をもう一度考えてください")
-    fut_book = fut.text
-    st.write(f"Your question is : {text}")
-    st.write(fut_book)
-    
-    
