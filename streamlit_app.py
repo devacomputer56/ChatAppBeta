@@ -165,7 +165,7 @@ with st.sidebar:
     if st.button("再生成する") :
         add = st.text_input("さらに尋ねてみてください。")
         model = genai.GenerativeModel('gemini-1.5-flash')
-        fut = model.generate_content(f"{prompt}という質問をもう一度考えてください"))
+        fut = model.generate_content(f"{prompt}という質問をもう一度考えてください")
         fut_book = fut.text
         st.write(fut_book)
     
