@@ -163,7 +163,7 @@ if prompt := st.chat_input("ご用件を教えてください"):
 
 with st.sidebar:
     if st.button :
-        add = st.input("さらに尋ねてみてください。")
+        add = st.text_input("さらに尋ねてみてください。")
         model = genai.GenerativeModel('gemini-1.5-flash')
         fut = model.generate_content(f"先ほど私は{prompt}という質問をしてあなたは{assistant_response}という回答をしました。それについてさらに{add}という質問があります。答えてください。")
     
