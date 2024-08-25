@@ -153,7 +153,6 @@ if prompt := st.chat_input("ご用件を教えてください"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
-    prompt = prompt_re
     
     model = genai.GenerativeModel('gemini-1.5-flash')
     templa00=instructions
@@ -169,7 +168,7 @@ with st.sidebar:
     if st.button("再生成する") :
         add = st.text_input("さらに尋ねてみてください。")
         model = genai.GenerativeModel('gemini-1.5-flash')
-        fut = model.generate_content(f"{prompt_re}という質問をもう一度考えてください")
+        fut = model.generate_content(f"{prompt}という質問をもう一度考えてください")
         fut_book = fut.text
         st.write(fut_book)
     
